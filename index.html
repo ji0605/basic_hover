@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hover 배우기</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/fonts.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="gnb">
+            <ul>
+                <li><a href="">menu01</a></li>
+                <li><a href="">meun02</a></li>
+                <li><a href="">meun03</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="sec01 default">
+            <div class="tit">
+                <h2>title</h2>
+                <p>Lorem ipsum dolor sit.</p>
+            </div>
+            <div class="inner">
+                <div class="itm">
+                    <div class="img_box">
+                        <img src="./images/con01.jpg" alt="">
+                    </div>
+                    <strong>Lorem, ipsum.</strong>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+                <div class="itm">
+                    <div class="img_box">
+                        <img src="./images/con5.jpg" alt="">
+                    </div>
+                    <strong>Lorem, ipsum.</strong>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+                <div class="itm">
+                    <div class="img_box">
+                        <img src="./images/con04.jpg" alt="">
+                    </div>
+                    <strong>Lorem, ipsum.</strong>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+            </div>
+        </section>
+        <section class="sec02 default">
+            <div class="tit">
+                <h2>title <span>0</span></h2>
+                <p>Lorem ipsum dolor sit.</p>
+            </div>
+            <div class="inner">
+                <div class="itm">
+                    <div class="img_box">
+                        <img src="./images/con01.jpg" alt="">
+                        <button class="addCart">
+                            <i class="xi-cart-o"></i>
+                        </button>
+                    </div>
+                    <strong>Lorem, ipsum.</strong>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+                <div class="itm">
+                    <div class="img_box">
+                        <img src="./images/con5.jpg" alt="">
+                        <button class="addCart">
+                            <i class="xi-cart-o"></i>
+                        </button>
+                    </div>
+                    <strong>Lorem, ipsum.</strong>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+                <div class="itm">
+                    <div class="img_box">
+                        <img src="./images/con04.jpg" alt="">
+                        <button class="addCart">
+                            <i class="xi-cart-o"></i>
+                        </button>
+                    </div>
+                    <strong>Lorem, ipsum.</strong>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+            </div>
+
+        </section>
+    </main>
+    <footer>&copy;</footer>
+
+    <script>
+        const cartNum = 0;
+        const CART = document.querySelector('.sec02 h2 span');
+        const ADDCARTBTN = document.querySelectorAll('.sec02 .addCart');
+        ADDCARTBTN.forEach(function (it) {
+            it.addEventListener('click', function () {
+                cartNum = cartNum + 1;
+                CART.innerHTML = cartNum;
+            })
+        })
+
+    </script>
+
+</body>
+
+</html>
